@@ -23,6 +23,10 @@ public class Cave implements Serializable {
     }
 
     public void listMonsters() {
+        if (monsters.size() == 0) {
+            System.out.println("Luola on tyhjä.");
+            return;
+        }
         System.out.println("Luolan hirviöt:");
         for (int i = 0; i < monsters.size(); i++) {
             monsters.get(i).printInfo(i + 1);
@@ -41,7 +45,7 @@ public class Cave implements Serializable {
         try { ObjectOutputStream save = new ObjectOutputStream(new FileOutputStream(fileName));
             save.writeObject(this);
             save.close();
-            System.out.println("peli tallennettu tiedostoon " + fileName);
+            System.out.println("peli tallennettiin tiedostoon " + fileName + ".");
         }
         catch (IOException e) {
             System.out.println("Pelin tallentaminen ei onnistu.");

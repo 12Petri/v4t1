@@ -15,7 +15,7 @@ public class App {
         boolean exit = false;
         while (!exit) {
             System.out.println("1) Lisää luolaan hirviö\r\n" + //
-                                "2) Listaa hirvöt\r\n" + //
+                                "2) Listaa hirviöt\r\n" + //
                                 "3) Hyökkää hirviöön\r\n" + //
                                 "4) Tallenna peli\r\n" + //
                                 "5) Lataa peli\r\n" + //
@@ -46,7 +46,7 @@ public class App {
                 cave.hitMonster(j);
                 break;
             case 4:
-                System.out.println("Anna tiedoston nimi, johon peli tallennetaan:");
+                System.out.println("Anna tiedoston nimi, johon peli tallentaa:");
                 String fileNameSave = sc.nextLine();
                 cave.saveGame(fileNameSave);
                 break;
