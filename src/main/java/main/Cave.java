@@ -33,6 +33,16 @@ public class Cave implements Serializable {
         } 
     }
 
+    public void getMonsters() {
+        if (monsters.size() == 0) {
+            System.out.println("Luola on tyhjä.");
+            return;
+        }
+        for (int i = 0; i < monsters.size(); i++) {
+            monsters.get(i).printInfo(i + 1);
+        } 
+    }
+
     public void hitMonster(int j) {
         Monster target = monsters.get(j);
         player.attack(target);
