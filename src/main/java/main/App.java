@@ -40,7 +40,7 @@ public class App {
                 cave.listMonsters();
                 break;
             case 3:
-                System.out.print("Valitse hirviö, johon hyökätä:");
+                System.out.println("Valitse hirviö, johon hyökätä:");
                 int j = sc.nextInt() - 1;
                 cave.getMonsters();
                 sc.nextLine();
