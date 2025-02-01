@@ -45,7 +45,7 @@ public class Cave implements Serializable {
         try { ObjectOutputStream save = new ObjectOutputStream(new FileOutputStream(fileName));
             save.writeObject(this);
             save.close();
-            System.out.println("peli tallennettiin tiedostoon " + fileName + ".");
+            System.out.println("Peli tallennettiin tiedostoon " + fileName + ".");
         }
         catch (IOException e) {
             System.out.println("Pelin tallentaminen ei onnistu.");
